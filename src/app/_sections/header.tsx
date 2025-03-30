@@ -1,13 +1,11 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
-import { Menu } from "lucide-react";
 import BookCallButtons from "../../components/buttons/book-call-button";
 import { DropdownMenuDemo } from "../../components/menus/desktop-menu";
 
 export default function Header({ className }: { className: string }) {
-  const [, setMobileMenuOpen] = useState(false);
+  // const [, setMobileMenuOpen] = useState(false);
 
   return (
     <header className={className}>
