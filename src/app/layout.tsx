@@ -10,6 +10,21 @@ const bricolageGrotesque = Bricolage_Grotesque({
 export const metadata: Metadata = {
   title: "Labyrnth Co",
   description: "Labyrnth Co",
+  openGraph: {
+    locale: "en_US",
+    type: "website",
+    title: "Labyrnth Co",
+    description: "Labyrnth Co",
+    url: process.env.VERCEL_URL,
+    siteName: "Labyrnth Co",
+    images: [
+      {
+        width: 655,
+        height: 336,
+        url: `${process.env.VERCEL_URL}/img/banner.png`,
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
