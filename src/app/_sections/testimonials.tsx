@@ -1,7 +1,5 @@
 import { Marquee } from "@/components/magicui/marquee";
-import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { ArrowLeftIcon, ArrowRightIcon } from "lucide-react";
 import Image from "next/image";
 
 export default function Testimonials({ className }: { className: string }) {

@@ -5,12 +5,15 @@ import Hero from "./_sections/hero";
 import Stats from "./_sections/stats";
 import Description from "./_sections/description";
 import Pillars from "./_sections/pillars";
-import Bento from "./_sections/bento";
 import Services from "./_sections/services";
 import Cases from "./_sections/cases";
 import Testimonials from "./_sections/testimonials";
 import SquareCta from "./_sections/square-cta";
 import Footer from "./_sections/footer";
+
+import dynamic from "next/dynamic";
+
+const NoSSRBento = dynamic(() => import("./_sections/bento"), { ssr: false });
 
 export default function Home() {
   return (
@@ -20,7 +23,7 @@ export default function Home() {
       <Stats className="max-w-7xl w-full mx-auto mt-10" />
       <Description className="max-w-7xl w-full mx-auto mt-10 " />
       <Pillars className="mt-20" />
-      <Bento className="max-w-7xl w-full mx-auto mt-20" />
+      <NoSSRBento className="max-w-7xl w-full mx-auto mt-20" />
       <Services className="max-w-7xl w-full mx-auto mt-20" />
       <Cases className="max-w-7xl w-full mx-auto mt-20" />
       <Testimonials className="w-full mx-auto mt-20" />
