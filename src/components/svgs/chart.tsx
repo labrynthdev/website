@@ -1,12 +1,6 @@
 export default function Chart() {
   return (
-    <svg
-      width="432"
-      height="315"
-      viewBox="0 0 432 315"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg viewBox="0 0 432 315" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M96 135.5L25 106.5L-13 165.5V315H444L451.5 114.044L444 3L383 69H338.5L302 106.5L198 92.5L96 135.5Z"
         fill="url(#paint0_linear_153_19974)"

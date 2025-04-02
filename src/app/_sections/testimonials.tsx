@@ -28,22 +28,22 @@ export default function Testimonials({ className }: { className: string }) {
 
   return (
     <section className={className}>
-      <div className="grid grid-cols-5 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-5 max-w-7xl mx-auto px-5 xl:px-0">
         <div className="col-span-3">
-          <h1 className="text-6xl font-medium">
+          <h1 className="text-4xl lg:text-6xl font-medium text-center lg:text-left">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit,
             <br />
             <span className="text-[#77A21C]">sed do eiusmod.</span>
           </h1>
         </div>
-        <div className="flex items-end justify-end gap-2 col-span-2">
+        {/* <div className="flex items-end gap-2 col-span-2 justify-center lg:justify-end mt-4 lg:mt-0">
           <Button variant="outline" size="lg" className="rounded-full ">
             <ArrowLeftIcon className="w-4 h-4 mx-2" />
           </Button>
           <Button variant="outline" size="lg" className="rounded-full ">
             <ArrowRightIcon className="w-4 h-4 mx-2" />
           </Button>
-        </div>
+        </div> */}
       </div>
 
       <div className=" mt-10">

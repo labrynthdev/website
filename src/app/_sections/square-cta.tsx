@@ -7,22 +7,40 @@ export default function SquareCta({ className }: { className: string }) {
     <section
       className={cn(
         className,
-        "w-full bg-[url('/assets/pillars-2.svg')] bg-contain bg-center bg-no-repeat min-h-[45rem] flex items-center justify-center"
+        `w-full bg-[url('/assets/pillars-bg.svg')] sm:bg-[url('/assets/pillars-2.svg')] 
+        bg-contain bg-center bg-no-repeat 
+        min-h-[50rem] md:min-h-[50rem] 
+        flex justify-center
+        items-start sm:items-center
+        pt-[10rem] sm:pt-[0rem]`
       )}
     >
       <div className="flex flex-col items-center justify-center">
-        <p className="text-6xl text-center max-w-3xl">
-          Lorem ipsum dolor sit amet, consectetur
-          <Image
-            src="/assets/avatars.svg"
-            width={150}
-            height={50}
-            alt="avatars"
-            className="inline-block mx-2"
-          />
-          adipiscing.
-        </p>
-        <p className=" text-center max-w-xl">
+        <div className=" text-center text-3xl md:text-4xl lg:text-6xl max-w-lg md:max-w-xl lg:max-w-3xl ">
+          <div className="hidden sm:inline-block">
+            Lorem ipsum dolor sit amet, consectetur
+            <Image
+              src="/assets/avatars.svg"
+              width={150}
+              height={50}
+              alt="avatars"
+              className="inline-block mx-2 w-24 sm:w-28 md:w-32 lg:w-40"
+            />
+            adipiscing.
+          </div>
+          <div className="inline-block sm:hidden">
+            <Image
+              src="/assets/avatars.svg"
+              width={150}
+              height={50}
+              alt="avatars"
+              className="inline-block mx-2 w-24 sm:w-28 md:w-32 lg:w-40"
+            />
+            <br />
+            Lorem ipsum dolor sit amet, consectetur adipiscing.
+          </div>
+        </div>
+        <p className="text-center max-w-xl">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam
@@ -38,6 +56,7 @@ export default function SquareCta({ className }: { className: string }) {
             width={150}
             height={50}
             alt="avatars"
+            className="w-32 sm:w-24 md:w-32 lg:w-40"
           />
         </motion.div>
       </div>

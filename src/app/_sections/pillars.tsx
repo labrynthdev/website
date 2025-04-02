@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Pillars({ className }: { className: string }) {
   return (
     <section className={className}>
-      <div className="flex items-center justify-between max-w-7xl w-full mx-auto">
+      <div className="flex items-center justify-between max-w-7xl w-full mx-auto px-5 xl:px-0">
         <p className="text-left text-2xl w-[20rem]">
           Lorem ipsum dolor sit amet, consectetur adipiscing.
         </p>
@@ -15,8 +15,8 @@ export default function Pillars({ className }: { className: string }) {
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
       </div>
-      <div className="flex justify-center mt-10 pr-20">
-        <div className="flex gap-4 justify-between items-end w-6xl">
+      <div className="flex justify-center mt-10 pr-20 overflow-hidden">
+        <div className="flex gap-4 justify-between items-end  min-w-5xl w-full max-w-6xl  overflow-hidden">
           <Pillar
             name="Company Name"
             description="Lorem ipsum dolor sit amet, consectetur"

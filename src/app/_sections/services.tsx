@@ -23,7 +23,12 @@ export default function Services({ className }: { className: string }) {
   };
 
   return (
-    <section className={cn(className, "grid grid-cols-4")}>
+    <section
+      className={cn(
+        className,
+        "grid grid-cols-1 lg:grid-cols-4 gap-y-8 lg:gap-y-0 px-5 xl:px-0"
+      )}
+    >
       <div>
         <Button
           className="rounded-3xl border-black bg-transparent "
@@ -35,7 +40,7 @@ export default function Services({ className }: { className: string }) {
         </Button>
       </div>
       <div className="col-span-3">
-        <h1 className="text-6xl font-medium">
+        <h1 className="text-4xl lg:text-6xl font-medium">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod.
         </h1>

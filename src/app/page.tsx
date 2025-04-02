@@ -14,12 +14,12 @@ import Footer from "./_sections/footer";
 
 export default function Home() {
   return (
-    <main className="flex flex-col w-full mx-auto mb-5 min-w-[82rem] overflow-x-scroll">
+    <main className="flex flex-col w-full mx-auto mb-5 overflow-x-scroll min-w-[25rem]">
       <Header className="max-w-7xl w-full mx-auto" />
       <Hero />
       <Stats className="max-w-7xl w-full mx-auto mt-10" />
-      <Description className="max-w-7xl w-full mx-auto mt-10" />
-      <Pillars className=" mt-20" />
+      <Description className="max-w-7xl w-full mx-auto mt-10 " />
+      <Pillars className="mt-20" />
       <Bento className="max-w-7xl w-full mx-auto mt-20" />
       <Services className="max-w-7xl w-full mx-auto mt-20" />
       <Cases className="max-w-7xl w-full mx-auto mt-20" />

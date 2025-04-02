@@ -1,12 +1,6 @@
 export default function Spheres() {
   return (
-    <svg
-      width="432"
-      height="195"
-      viewBox="0 0 432 195"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg viewBox="0 0 432 195" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g clipPath="url(#clip0_153_19991)">
         <rect width="432" height="195" rx="12" fill="white" />
         <g filter="url(#filter0_dddd_153_19991)">
