@@ -15,13 +15,13 @@ export const metadata: Metadata = {
     type: "website",
     title: "Labyrnth Co",
     description: "Labyrnth Co",
-    url: process.env.APP_PATH,
+    url: "https://website-labrynths-projects.vercel.app/img/banner.png",
     siteName: "Labyrnth Co",
     images: [
       {
         width: 655,
         height: 336,
-        url: `${process.env.APP_PATH}/img/banner.png`,
+        url: `https://website-labrynths-projects.vercel.app/img/banner.png`,
       },
     ],
   },
