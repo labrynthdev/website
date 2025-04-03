@@ -5,6 +5,8 @@ import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
+import { scrolltoHash } from "@/lib/utils";
+
 export default function Footer({ className }: { className: string }) {
   return (
     <footer className={cn(className, "px-5 xl:px-0")}>
@@ -52,7 +54,8 @@ export default function Footer({ className }: { className: string }) {
               <ul className="space-y-2">
                 <li>
                   <Link
-                    href="/about"
+                    target="_blank"
+                    href="https://www.instagram.com/labrynth.ai/"
                     className="text-white hover:text-gray-300"
                   >
                     Instagram
@@ -60,20 +63,26 @@ export default function Footer({ className }: { className: string }) {
                 </li>
                 <li>
                   <Link
-                    href="/careers"
+                    target="_blank"
+                    href="https://www.facebook.com/labrynth.ai/"
                     className="text-white hover:text-gray-300"
                   >
                     Facebook
                   </Link>
                 </li>
                 <li>
-                  <Link href="/blog" className="text-white hover:text-gray-300">
+                  <Link
+                    target="_blank"
+                    href="https://www.linkedin.com/company/labrynth-ai/"
+                    className="text-white hover:text-gray-300"
+                  >
                     LinkedIn
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/press"
+                    target="_blank"
+                    href="https://wa.me/1234567890"
                     className="text-white hover:text-gray-300"
                   >
                     Whatsapp
@@ -85,34 +94,29 @@ export default function Footer({ className }: { className: string }) {
             <div>
               <h3 className="font-semibold text-[#FFFFFF66] mb-4">Menu</h3>
               <ul className="space-y-2">
-                <li>
-                  <Link
-                    href="/about"
-                    className="text-white hover:text-gray-300"
-                  >
-                    About Us
-                  </Link>
+                <li
+                  onClick={() => scrolltoHash("about-us")}
+                  className="text-white hover:text-gray-300 cursor-pointer"
+                >
+                  About Us
                 </li>
-                <li>
-                  <Link
-                    href="/careers"
-                    className="text-white hover:text-gray-300"
-                  >
-                    Services
-                  </Link>
+                <li
+                  className="text-white hover:text-gray-300 cursor-pointer"
+                  onClick={() => scrolltoHash("services")}
+                >
+                  Services
                 </li>
-                <li>
-                  <Link href="/blog" className="text-white hover:text-gray-300">
-                    Out Works
-                  </Link>
+                <li
+                  className="text-white hover:text-gray-300 cursor-pointer"
+                  onClick={() => scrolltoHash("our-works")}
+                >
+                  Out Works
                 </li>
-                <li>
-                  <Link
-                    href="/press"
-                    className="text-white hover:text-gray-300"
-                  >
-                    Reviews
-                  </Link>
+                <li
+                  className="text-white hover:text-gray-300 cursor-pointer"
+                  onClick={() => scrolltoHash("reviews")}
+                >
+                  Reviews
                 </li>
               </ul>
             </div>

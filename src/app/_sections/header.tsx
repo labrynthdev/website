@@ -4,20 +4,10 @@ import Image from "next/image";
 import BookCallButtons from "../../components/buttons/book-call-button";
 import { MainMenu } from "../../components/menus/desktop-menu";
 import Link from "next/link";
+import { scrolltoHash } from "@/lib/utils";
 
 export default function Header({ className }: { className: string }) {
   // const [, setMobileMenuOpen] = useState(false);
-
-  const scrolltoHash = function (element_id: string) {
-    setTimeout(() => {
-      const element = document.getElementById(element_id);
-      element?.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-        inline: "start",
-      });
-    }, 300);
-  };
 
   return (
     <header className={className}>
