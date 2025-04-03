@@ -7,7 +7,7 @@ import { useWindowSize } from "usehooks-ts";
 export default function Bento({ className }: { className: string }) {
   const { width = 0 } = useWindowSize();
 
-  const isMedium = width > 640 && width < 1024;
+  const isMedium = width >= 768 && width < 1024;
 
   return (
     <section className={className}>
@@ -57,7 +57,7 @@ export default function Bento({ className }: { className: string }) {
 
         <div className="col-span-2 flex flex-col gap-y-4 gap-x-0 md:gap-x-4">
           {!isMedium && (
-            <BentoSvgs className="grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-0 md:gap-x-4 grid md:hidden lg:grid" />
+            <BentoSvgs className="grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-0 md:gap-x-4 grid lg:hidden xl:grid" />
           )}
           <div className="relative w-full h-full overflow-hidden bg-[#ffffff] rounded-xl grid grid-cols-2 md:grid-cols-5 gap-y-8 md:gap-y-0">
             <div className="col-span-3">

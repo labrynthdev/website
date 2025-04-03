@@ -2,11 +2,22 @@
 
 import Image from "next/image";
 import BookCallButtons from "../../components/buttons/book-call-button";
-import { DropdownMenuDemo } from "../../components/menus/desktop-menu";
+import { MainMenu } from "../../components/menus/desktop-menu";
 import Link from "next/link";
 
 export default function Header({ className }: { className: string }) {
   // const [, setMobileMenuOpen] = useState(false);
+
+  const scrolltoHash = function (element_id: string) {
+    setTimeout(() => {
+      const element = document.getElementById(element_id);
+      element?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "start",
+      });
+    }, 300);
+  };
 
   return (
     <header className={className}>
@@ -15,7 +26,7 @@ export default function Header({ className }: { className: string }) {
         className="mx-auto grid-cols-3 sm:px-0 sm:py-0 lg:px-8 hidden sm:grid"
       >
         <div className="flex items-center justify-start">
-          <DropdownMenuDemo />
+          <MainMenu scrolltoHash={scrolltoHash} />
         </div>
         <Link href="/" className="flex items-center justify-center">
           <span className="sr-only">Your Company</span>
@@ -39,7 +50,7 @@ export default function Header({ className }: { className: string }) {
         </div>
 
         <div className="flex items-center justify-end">
-          <DropdownMenuDemo />
+          <MainMenu scrolltoHash={scrolltoHash} />
         </div>
       </nav>
     </header>

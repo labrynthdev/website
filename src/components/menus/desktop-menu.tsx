@@ -12,7 +12,11 @@ import {
 } from "@/components/ui/dropdown-menu";
 import SquaresIcon from "../icons/squares";
 
-export function DropdownMenuDemo() {
+export function MainMenu({
+  scrolltoHash,
+}: {
+  scrolltoHash: (element_id: string) => void;
+}) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -49,22 +53,34 @@ export function DropdownMenuDemo() {
           </div>
 
           <div className="space-y-8 ">
-            <DropdownMenuItem className="flex justify-between items-center p-2 px-4 cursor-pointer  focus:text-white focus:bg-zinc-800 hover:bg-zinc-800 font-medium text-md sm:text-xl">
+            <DropdownMenuItem
+              onSelect={() => scrolltoHash("about-us")}
+              className="flex justify-between items-center p-2 px-4 cursor-pointer  focus:text-white focus:bg-zinc-800 hover:bg-zinc-800 font-medium text-md sm:text-xl"
+            >
               About us
               <ArrowRight className="h-5 w-5" />
             </DropdownMenuItem>
 
-            <DropdownMenuItem className="flex justify-between items-center p-2 px-4 cursor-pointer font-medium focus:text-white focus:bg-zinc-800 hover:bg-zinc-80 text-md sm:text-xl">
+            <DropdownMenuItem
+              onSelect={() => scrolltoHash("services")}
+              className="flex justify-between items-center p-2 px-4 cursor-pointer font-medium focus:text-white focus:bg-zinc-800 hover:bg-zinc-80 text-md sm:text-xl"
+            >
               Services
               <ArrowRight className="h-5 w-5" />
             </DropdownMenuItem>
 
-            <DropdownMenuItem className="flex justify-between items-center p-2 px-4 cursor-pointer font-medium focus:text-white focus:bg-zinc-800 hover:bg-zinc-80 text-md sm:text-xl">
+            <DropdownMenuItem
+              onSelect={() => scrolltoHash("our-works")}
+              className="flex justify-between items-center p-2 px-4 cursor-pointer font-medium focus:text-white focus:bg-zinc-800 hover:bg-zinc-80 text-md sm:text-xl"
+            >
               Our works
               <ArrowRight className="h-5 w-5" />
             </DropdownMenuItem>
 
-            <DropdownMenuItem className="flex justify-between items-center p-2 px-4 cursor-pointer font-medium focus:text-white focus:bg-zinc-800 hover:bg-zinc-80 text-md sm:text-xl">
+            <DropdownMenuItem
+              onSelect={() => scrolltoHash("reviews")}
+              className="flex justify-between items-center p-2 px-4 cursor-pointer font-medium focus:text-white focus:bg-zinc-800 hover:bg-zinc-80 text-md sm:text-xl"
+            >
               Reviews
               <ArrowRight className="h-5 w-5" />
             </DropdownMenuItem>

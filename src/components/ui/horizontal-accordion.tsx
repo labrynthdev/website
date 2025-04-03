@@ -52,7 +52,7 @@ function HorizontalAccordionContent({
       className="data-[state=closed]:animate-accordion-close data-[state=open]:animate-accordion-open overflow-hidden text-sm"
       {...props}
     >
-      <div className={cn("pt-0 pb-4", className)}>{children}</div>
+      <div className={cn("", className)}>{children}</div>
     </AccordionPrimitive.Content>
   );
 }

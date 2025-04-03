@@ -21,12 +21,12 @@ export default function Home() {
       <Header className="max-w-7xl w-full mx-auto" />
       <Hero />
       <Stats className="max-w-7xl w-full mx-auto mt-10" />
-      <Description className="max-w-7xl w-full mx-auto mt-10 " />
+      <Description id="about-us" className="max-w-7xl w-full mx-auto mt-10 " />
       <Pillars className="mt-20" />
       <NoSSRBento className="max-w-7xl w-full mx-auto mt-20" />
-      <Services className="max-w-7xl w-full mx-auto mt-20" />
-      <Cases className="max-w-7xl w-full mx-auto mt-20" />
-      <Testimonials className="w-full mx-auto mt-20" />
+      <Services id="services" className="max-w-7xl w-full mx-auto mt-20" />
+      <Cases id="our-works" className="max-w-7xl w-full mx-auto mt-20" />
+      <Testimonials id="reviews" className="w-full mx-auto mt-20" />
       <SquareCta className="max-w-5xl w-full mx-auto mt-20" />
       <Footer className="max-w-7xl w-full mx-auto mt-20" />
     </main>

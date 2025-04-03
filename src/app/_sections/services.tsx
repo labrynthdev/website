@@ -11,7 +11,13 @@ import { AccordionHeader } from "@radix-ui/react-accordion";
 import { useState } from "react";
 import Image from "next/image";
 
-export default function Services({ className }: { className: string }) {
+export default function Services({
+  id,
+  className,
+}: {
+  id: string;
+  className: string;
+}) {
   const [value, setValue] = useState("item-1");
 
   const handleToggle = (item: string) => {
@@ -24,6 +30,7 @@ export default function Services({ className }: { className: string }) {
 
   return (
     <section
+      id={id}
       className={cn(
         className,
         "grid grid-cols-1 lg:grid-cols-4 gap-y-8 lg:gap-y-0 px-5 xl:px-0"

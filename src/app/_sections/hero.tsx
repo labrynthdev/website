@@ -77,7 +77,7 @@ export default function Hero() {
       </motion.h1>
 
       <div className="relative w-full flex flex-col  items-center">
-        <div className="absolute bg-[url(/img/wave-background.png)] bg-cover opacity-5 h-[575px] w-full -top-28 z-0"></div>
+        <div className="absolute bg-[url(/img/wave-background.png)] bg-cover opacity-5 h-[575px] w-full -top-8 sm:-top-14 md:-top-18 lg:-top-22 xl:-top-28 z-0"></div>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{
@@ -112,9 +112,9 @@ export default function Hero() {
                 width={150}
                 height={50}
                 alt="avatars"
-                className="w-[8rem] md:w-[6rem] lg:w-[8rem] xl:w-[10rem]"
+                className="w-[6rem] md:w-[6rem] lg:w-[8rem] xl:w-[10rem]"
               />
-              <h1 className="text-[3rem] sm:text-[2rem] lg:text-[3rem] xl:text-[4rem] font-semibold">
+              <h1 className="text-[2rem] sm:text-[2rem] lg:text-[3rem] xl:text-[4rem] font-semibold">
                 2M+
               </h1>
             </div>

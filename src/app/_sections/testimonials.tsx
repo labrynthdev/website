@@ -2,7 +2,13 @@ import { Marquee } from "@/components/magicui/marquee";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 
-export default function Testimonials({ className }: { className: string }) {
+export default function Testimonials({
+  className,
+  id,
+}: {
+  className: string;
+  id: string;
+}) {
   const reviews = [
     {
       name: "Jack Doe",
@@ -25,7 +31,7 @@ export default function Testimonials({ className }: { className: string }) {
   ];
 
   return (
-    <section className={className}>
+    <section id={id} className={className}>
       <div className="grid grid-cols-1 lg:grid-cols-5 max-w-7xl mx-auto px-5 xl:px-0">
         <div className="col-span-3">
           <h1 className="text-4xl lg:text-6xl font-medium text-center lg:text-left">

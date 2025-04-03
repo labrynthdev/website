@@ -105,13 +105,19 @@ const cases = [
   },
 ];
 
-export default function Cases({ className }: { className: string }) {
+export default function Cases({
+  id,
+  className,
+}: {
+  id: string;
+  className: string;
+}) {
   const [selectedValue, setSelectedValue] = useState<string | "">("item-1");
 
   return (
-    <section className={cn(className, "px-5 xl:px-0")}>
-      <div className="flex items-center justify-between">
-        <h1 className="text-4xl font-medium w-[30rem]">
+    <section id={id} className={cn(className, "px-5 xl:px-0")}>
+      <div className="flex items-center justify-between flex-col sm:flex-row gap-y-4 sm:gap-y-0">
+        <h1 className="text-4xl font-medium w-full sm:w-[25rem] md:w-[30rem] text-center sm:text-left">
           Lorem ipsum dolor sit amet, consectetur adipiscing.
         </h1>
         <Button className="text-lg shadow-2xl" size="xl">

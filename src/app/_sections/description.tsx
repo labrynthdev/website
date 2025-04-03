@@ -3,9 +3,15 @@
 import Dots from "@/components/ui/dots";
 import Image from "next/image";
 
-export default function Description({ className }: { className: string }) {
+export default function Description({
+  id,
+  className,
+}: {
+  id: string;
+  className: string;
+}) {
   return (
-    <section className={className}>
+    <section id={id} className={className}>
       <div className="flex flex-col items-center justify-center w-full  max-w-5xl mx-auto text-3xl sm:text-4xl xl:text-5xl px-5 xl:px-0 ">
         <p className="text-left md:text-center">
           Lorem ipsum dolor sit amet, consectetur adipiscing{" "}
