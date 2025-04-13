@@ -2,49 +2,37 @@
 
 import { Marquee } from "@/components/magicui/marquee";
 import Image from "next/image";
+import textData from "@/lib/text-data";
+
 export default function Pillars({ className }: { className: string }) {
   return (
     <section className={className}>
       <div className="flex items-center justify-between max-w-7xl w-full mx-auto px-5 xl:px-0">
         <p className="text-left text-2xl w-[20rem]">
-          Lorem ipsum dolor sit amet, consectetur adipiscing.
+          {textData.pillars.intro.left}
         </p>
 
-        <p className="text-right w-[20rem]">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
+        <p className="text-right w-[20rem]">{textData.pillars.intro.right}</p>
       </div>
       <div className="flex justify-center mt-10 pr-20 overflow-hidden">
         <div className="flex gap-4 justify-between items-end  min-w-5xl w-full max-w-6xl  overflow-hidden">
-          <Pillar
-            name="Company Name"
-            description="Lorem ipsum dolor sit amet, consectetur"
-            value={1.2}
-          />
-          <Pillar
-            size="sm"
-            name="Company Name"
-            description="Lorem ipsum dolor sit amet, consectetur"
-            value={1.2}
-          />
-          <Pillar
-            size="xl"
-            name="Company Name"
-            description="Lorem ipsum dolor sit amet, consectetur"
-            value={1.2}
-          />
-          <Pillar
-            name="Company Name"
-            description="Lorem ipsum dolor sit amet, consectetur"
-            value={1.2}
-          />
-          <Pillar
-            size="lg"
-            name="Company Name"
-            description="Lorem ipsum dolor sit amet, consectetur"
-            value={1.2}
-          />
+          {textData.pillars.items.map((item, index) => (
+            <Pillar
+              key={index}
+              name={item.name}
+              description={item.description}
+              value={item.value}
+              size={
+                index === 1
+                  ? "sm"
+                  : index === 2
+                  ? "xl"
+                  : index === 4
+                  ? "lg"
+                  : "md"
+              }
+            />
+          ))}
         </div>
       </div>
       <div className="h-10 bg-white"></div>
@@ -53,15 +41,15 @@ export default function Pillars({ className }: { className: string }) {
         <Marquee pauseOnHover className="[--duration:10s]">
           <div className="flex items-center text-2xl gap-4">
             <Image src="/logo.svg" alt="logo" width={20} height={20} />
-            LOREM IPSUM
+            {textData.pillars.marquee}
           </div>
           <div className="flex items-center text-2xl gap-4">
             <Image src="/logo.svg" alt="logo" width={20} height={20} />
-            LOREM IPSUM
+            {textData.pillars.marquee}
           </div>
           <div className="flex items-center text-2xl gap-4">
             <Image src="/logo.svg" alt="logo" width={20} height={20} />
-            LOREM IPSUM
+            {textData.pillars.marquee}
           </div>
         </Marquee>
         <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-background"></div>
@@ -80,7 +68,7 @@ function Pillar({
   size?: "sm" | "md" | "lg" | "xl";
   name: string;
   description: string;
-  value: number;
+  value: string;
 }) {
   const pillarSize = {
     sm: "w-[6rem] h-[18rem]",
@@ -98,7 +86,7 @@ function Pillar({
 
   return (
     <div className="flex flex-col items-center gap-2">
-      <p className="text-5xl font-semibold">{value}M</p>
+      <p className="text-5xl font-semibold">{value}</p>
       <p className="text-center w-[10rem]">{description}</p>
       <div className="relative">
         <div

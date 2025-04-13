@@ -16,94 +16,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion-unstyled";
 import { Separator } from "@/components/ui/separator";
-
-const cases = [
-  {
-    id: "item-1",
-    name: "case name",
-    image: "/img/horizontal-acc-1.png",
-    items: [
-      {
-        value: "1.2M",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, ",
-      },
-      {
-        value: "1.2M",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, ",
-      },
-      {
-        value: "1.2M",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, ",
-      },
-      {
-        value: "1.2M",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, ",
-      },
-    ],
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  },
-  {
-    id: "item-2",
-    name: "case name",
-    image: "/img/horizontal-acc-2.png",
-    items: [
-      {
-        value: "1.2M",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, ",
-      },
-    ],
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  },
-  {
-    id: "item-3",
-    name: "case name",
-    image: "/img/horizontal-acc-3.png",
-    items: [
-      {
-        value: "1.2M",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, ",
-      },
-    ],
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  },
-  {
-    id: "item-4",
-    name: "case name",
-    image: "/img/horizontal-acc-4.png",
-    items: [
-      {
-        value: "1.2M",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, ",
-      },
-    ],
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  },
-  {
-    id: "item-5",
-    name: "case name",
-    image: "/img/horizontal-acc-5.png",
-    items: [
-      {
-        value: "1.2M",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, ",
-      },
-    ],
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  },
-];
+import textData from "@/lib/text-data";
 
 export default function Cases({
   id,
@@ -118,10 +31,10 @@ export default function Cases({
     <section id={id} className={cn(className, "px-5 xl:px-0")}>
       <div className="flex items-center justify-between flex-col sm:flex-row gap-y-4 sm:gap-y-0">
         <h1 className="text-4xl font-medium w-full sm:w-[25rem] md:w-[30rem] text-center sm:text-left">
-          Lorem ipsum dolor sit amet, consectetur adipiscing.
+          {textData.cases.heading}
         </h1>
         <Button className="text-lg shadow-2xl" size="xl">
-          Book a call
+          {textData.cases.cta}
         </Button>
       </div>
       <div className="mt-8" suppressHydrationWarning>
@@ -133,10 +46,14 @@ export default function Cases({
           onValueChange={(value: string) => setSelectedValue(value)}
           className="flex-row gap-4 hidden xl:flex"
         >
-          {cases.map((item) => (
+          {textData.cases.items.map((item, index) => (
             <HorizontalCase
-              key={item.id}
-              {...item}
+              key={index}
+              id={`item-${index + 1}`}
+              name={item.name}
+              image={`/img/horizontal-acc-${index + 1}.png`}
+              items={item.stats}
+              description={item.description}
               selectedValue={selectedValue}
               setSelectedValue={setSelectedValue}
             />
@@ -151,10 +68,14 @@ export default function Cases({
           onValueChange={(value: string) => setSelectedValue(value)}
           className="flex flex-col gap-y-4 xl:hidden"
         >
-          {cases.map((item) => (
+          {textData.cases.items.map((item, index) => (
             <VerticalCase
-              key={item.id}
-              {...item}
+              key={index}
+              id={`item-${index + 1}`}
+              name={item.name}
+              image={`/img/horizontal-acc-${index + 1}.png`}
+              items={item.stats}
+              description={item.description}
               selectedValue={selectedValue}
               setSelectedValue={setSelectedValue}
             />

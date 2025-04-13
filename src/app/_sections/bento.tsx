@@ -3,6 +3,7 @@ import Spheres from "@/components/svgs/spheres";
 import Web3 from "@/components/svgs/web3";
 import Image from "next/image";
 import { useWindowSize } from "usehooks-ts";
+import textData from "@/lib/text-data";
 
 export default function Bento({ className }: { className: string }) {
   const { width = 0 } = useWindowSize();
@@ -14,16 +15,14 @@ export default function Bento({ className }: { className: string }) {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-0 md:gap-x-4   px-5 xl:px-0 w-full">
         <div className="col-span-1 bg-[#222222] rounded-3xl shadow-xl relative overflow-hidden w-full">
           <div className="inline-block bg-[#7a8c21] text-[#e9ff00] px-6 py-2 m-8 rounded-full text-sm font-medium mb-6">
-            lorem ipsum dolor
+            {textData.bento.tag}
           </div>
           <div className="mb-12 ml-8">
             <h2 className="text-white text-3xl sm:text-4xl md:text-3xl font-bold leading-tight">
-              Lorem ipsum dolor
-              <br />
-              sit amet, consectetur
+              {textData.bento.heading.main}
             </h2>
             <h3 className="text-gray-400 text-3xl sm:text-4xl md:text-3xl  font-bold mt-2">
-              adipiscing elit
+              {textData.bento.heading.sub}
             </h3>
           </div>
           <div className="h-48 md:h-32 relative mb-12 flex items-center justify-center">
@@ -32,7 +31,9 @@ export default function Bento({ className }: { className: string }) {
           <div className="flex items-center justify-center space-x-2 sm:space-x-4 md:space-x-2 lg:space-x-8 mb-8 xl:text-lg">
             <div className="flex items-center">
               <div className="w-4 h-4 rounded-full bg-[#7a8c21] mr-2"></div>
-              <span className="text-white">Before Labrynth</span>
+              <span className="text-white">
+                {textData.bento.comparison.before}
+              </span>
             </div>
             <div className="w-8">
               <svg viewBox="0 0 24 24" fill="none" className="w-full">
@@ -47,7 +48,9 @@ export default function Bento({ className }: { className: string }) {
             </div>
             <div className="flex items-center">
               <div className="w-4 h-4 rounded-full bg-[#e9ff00]  mr-2"></div>
-              <span className="text-white">After Labrynth</span>
+              <span className="text-white">
+                {textData.bento.comparison.after}
+              </span>
             </div>
           </div>
         </div>
@@ -64,14 +67,12 @@ export default function Bento({ className }: { className: string }) {
               <div className="flex items-center gap-2 my-4 mx-8">
                 <div className="w-4 h-4 rounded-full bg-[#16d151]"></div>
                 <p className="text-[#000000] text-lg">
-                  Lorem ipsum dolor sit amet
+                  {textData.bento.section.tag}
                 </p>
               </div>
 
-              {/* Main heading */}
               <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#000000] leading-tight mx-8">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod
+                {textData.bento.section.heading}
               </h1>
             </div>
 
@@ -97,7 +98,9 @@ export default function Bento({ className }: { className: string }) {
                       height={40}
                       priority
                     />
-                    <span className="text-[#ffffff] text-2xl">lorem ipsum</span>
+                    <span className="text-[#ffffff] text-2xl">
+                      {textData.bento.marquee}
+                    </span>
                   </div>
                 ))}
               </div>

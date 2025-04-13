@@ -7,7 +7,7 @@ import Description from "./_sections/description";
 import Pillars from "./_sections/pillars";
 import Services from "./_sections/services";
 import Cases from "./_sections/cases";
-import Testimonials from "./_sections/testimonials";
+// import Testimonials from "./_sections/testimonials";
 import SquareCta from "./_sections/square-cta";
 import Footer from "./_sections/footer";
 
@@ -26,7 +26,7 @@ export default function Home() {
       <NoSSRBento className="max-w-7xl w-full mx-auto mt-20" />
       <Services id="services" className="max-w-7xl w-full mx-auto mt-20" />
       <Cases id="our-works" className="max-w-7xl w-full mx-auto mt-20" />
-      <Testimonials id="reviews" className="w-full mx-auto mt-20" />
+      {/* <Testimonials id="reviews" className="w-full mx-auto mt-20" /> */}
       <SquareCta className="max-w-5xl w-full mx-auto mt-20" />
       <Footer className="max-w-7xl w-full mx-auto mt-20" />
     </main>

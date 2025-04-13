@@ -5,7 +5,7 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
-export function scrolltoHash(element_id: string) {
+export function scrollToHash(element_id: string) {
   setTimeout(() => {
     const element = document.getElementById(element_id);
     element?.scrollIntoView({

@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import textData from "@/lib/text-data";
 
 export default function SquareCta({ className }: { className: string }) {
   return (
@@ -16,17 +17,17 @@ export default function SquareCta({ className }: { className: string }) {
       )}
     >
       <div className="flex flex-col items-center justify-center">
-        <div className=" text-center text-3xl md:text-4xl lg:text-6xl max-w-lg md:max-w-xl lg:max-w-3xl ">
+        <div className=" text-center text-3xl md:text-4xl lg:text-5xl max-w-lg md:max-w-xl lg:max-w-3xl ">
           <div className="hidden sm:inline-block">
-            Lorem ipsum dolor sit amet, consectetur
+            {textData.square_cta.heading}
+            <br />
             <Image
               src="/assets/avatars.svg"
               width={150}
               height={50}
               alt="avatars"
-              className="inline-block mx-2 w-24 sm:w-28 md:w-32 lg:w-40"
+              className="inline-block mx-2 w-24 sm:w-28 md:w-32 lg:w-32"
             />
-            adipiscing.
           </div>
           <div className="inline-block sm:hidden">
             <Image
@@ -37,13 +38,11 @@ export default function SquareCta({ className }: { className: string }) {
               className="inline-block mx-2 w-24 sm:w-28 md:w-32 lg:w-40"
             />
             <br />
-            Lorem ipsum dolor sit amet, consectetur adipiscing.
+            {textData.square_cta.heading}
           </div>
         </div>
         <p className="text-center max-w-xl">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam
+          {textData.square_cta.description}
         </p>
         <motion.div
           whileHover={{ scale: 1.1 }}

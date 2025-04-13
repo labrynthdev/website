@@ -1,0 +1,296 @@
+{
+  "header": {
+    "company_name": "Labrynth",
+    "brand_name": "Labyrnth"
+  },
+  "hero": {
+    "stats": {
+      "value": "2M+",
+      "description": ""
+    },
+    "description_1": "Labyrnth delivers the map you need through the complexity of Web3",
+    "description_2": "",
+    "cta": "Explore"
+  },
+  "stats": {
+    "clients": {
+      "label": "CLIENTS",
+      "value": "200+"
+    },
+    "projects": {
+      "label": "PROJECTS",
+      "value": "300+"
+    },
+    "followers": {
+      "label": "FOLLOWERS",
+      "value": "90K"
+    },
+    "happy_clients": {
+      "label": "HAPPY CLIENTS",
+      "value": "100%"
+    }
+  },
+  "description": {
+    "paragraph1": "",
+    "paragraph2": ""
+  },
+  "pillars": {
+    "intro": {
+      "left": "",
+      "right": ""
+    },
+    "items": [
+      {
+        "name": "MemeFi",
+        "description": "Likes",
+        "value": "1M+ "
+      },
+      {
+        "name": "Lingocoins",
+        "description": "Impressions",
+        "value": "250k+ "
+      },
+      {
+        "name": "Atleta Network",
+        "description": "Views",
+        "value": "1M "
+      },
+      {
+        "name": "AiMonica Brands",
+        "description": "Added MCAP",
+        "value": "50M+ "
+      },
+      {
+        "name": "Tea Coin",
+        "description": "Likes",
+        "value": "15k+ "
+      }
+    ],
+    "marquee": "LOREM IPSUM"
+  },
+  "bento": {
+    "tag": "unlock the full potantial",
+    "heading": {
+      "main": "Reach to the level",
+      "sub": "your project deserves with an experienced touch"
+    },
+    "comparison": {
+      "before": "Before Labrynth",
+      "after": "After Labrynth"
+    },
+    "section": {
+      "tag": "All-in-one",
+      "heading": "Web3 expertise for everything from NFTs to DeFi"
+    },
+    "marquee": "Labyrnth"
+  },
+  "services": {
+    "button": "Our Services",
+    "heading": "We offer a range of services to help you grow your project",
+    "items": [
+      {
+        "title": "KOL Marketing",
+        "button": {
+          "view_more": "View more",
+          "view_less": "View less"
+        },
+        "content": {
+          "heading": "",
+          "description": "Influencer campaigns with over 1000 popular names from the space, featuring carefully prepared strategies and timely execution."
+        }
+      },
+      {
+        "title": "Collaborations",
+        "button": {
+          "view_more": "View more",
+          "view_less": "View less"
+        },
+        "content": {
+          "heading": "",
+          "description": "By having access to all top-tier communities within web3, thoroughly planned and conducted partnership activites."
+        }
+      },
+      {
+        "title": "Socials Management",
+        "button": {
+          "view_more": "View more",
+          "view_less": "View less"
+        },
+        "content": {
+          "heading": "",
+          "description": "Growing your socials including Discord, Telegram and Twitter while helping you to manage them."
+        }
+      },
+      {
+        "title": "Advisory",
+        "button": {
+          "view_more": "View more",
+          "view_less": "View less"
+        },
+        "content": {
+          "heading": "",
+          "description": "Top-quality insights and strategies by people with expertise in Web3 marketing to help your brand achieve its full potantial."
+        }
+      }
+    ]
+  },
+  "cases": {
+    "heading": "Case Studies",
+    "cta": "Book a call",
+    "items": [
+      {
+        "name": "MemeFi",
+        "description": "My partnership with MemeFi in their SocialFi Campaign propelled their success to new heights. I was responsible for their content marketing and helping with their new Game-Fi experience.",
+        "stats": [
+          {
+            "value": "1M+",
+            "description": "Likes"
+          },
+          {
+            "value": "10M+",
+            "description": "Impressions"
+          }
+        ]
+      },
+      {
+        "name": "Lingocoins",
+        "description": "My partnership with Lingo Coin in their SocialFi Campaign propelled their success to new heights. I was responsible for their content marketing and helping with their new gamified SocialFi experience.",
+        "stats": [
+          {
+            "value": "8K+",
+            "description": "likes"
+          },
+          {
+            "value": "250k+",
+            "description": "Impressions"
+          }
+        ]
+      },
+      {
+        "name": "Atleta Network",
+        "description": "I led a KOL marketing campaign in with Turkish KOLs, significantly increasing our reach by onboarding thousands and leveraging local influencers to educate our target audience. This strategic initiative greatly enhanced our market presence and influence.",
+        "stats": [
+          {
+            "value": "1M",
+            "description": "Views"
+          },
+          {
+            "value": "2k",
+            "description": "Likes"
+          },
+          {
+            "value": "2.3k+",
+            "description": "New Users"
+          },
+          {
+            "value": "100%",
+            "description": "Targets reached"
+          }
+        ]
+      },
+      {
+        "name": "AiMonica Brands",
+        "description": "My partnership with AiMonica Brands in their Memecoin Campaign propelled their success to new heights. I was responsible for KOLs' tweets.",
+        "stats": [
+          {
+            "value": "168K",
+            "description": "Views from 20 KOLs "
+          },
+          {
+            "value": "9K",
+            "description": "Likes from 20 KOLs"
+          },
+          {
+            "value": "50M",
+            "description": "MCAP increased"
+          },
+          {
+            "value": "100%",
+            "description": "Targets reached"
+          }
+        ]
+      },
+      {
+        "name": "Tea Coin",
+        "description": "Successfully led a last-minute KOL campaign to recover from a previously failed effort. By swiftly coordinating with relevant KOLs and providing them with accurate briefs, they effectively communicated with their communities, resulting in a significant increase in pre-sale participants for the project.",
+        "stats": [
+          {
+            "value": "15k+",
+            "description": "Likes"
+          },
+          {
+            "value": "250k+",
+            "description": "Impressions"
+          },
+          {
+            "value": "5k",
+            "description": "Followers"
+          },
+          {
+            "value": "100+",
+            "description": "Onboarded Participants"
+          }
+        ]
+      }
+    ]
+  },
+  "testimonials": {
+    "heading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, ",
+    "heading_sub": "sed do eiusmod.",
+    "reviews": [
+      {
+        "name": "Jack Doe",
+        "title": "CEO, Doe Inc.",
+        "body": "I've never seen anything like this before. It's amazing. I love it.",
+        "img": "/img/john-do.jpeg"
+      },
+      {
+        "name": "Jill Doe",
+        "title": "CEO, Doe Inc.",
+        "body": "I don't know what to say. I'm speechless. This is amazing.",
+        "img": "/img/john-do.jpeg"
+      },
+      {
+        "name": "James Smith",
+        "title": "CEO, Doe Inc.",
+        "body": "I'm at a loss for words. This is amazing. I love it.",
+        "img": "/img/john-do.jpeg"
+      }
+    ]
+  },
+  "square_cta": {
+    "heading": "Ready to learn more about the process?",
+    "description": "Feel free to book a call now. Our team will be happy to answer any questions you may have. "
+  },
+  "footer": {
+    "heading": "Looking for the right path?",
+    "tagline": "Navigate success with Labrynth",
+    "brand": {
+      "name": "Labrynth",
+      "description": "In the ever-evolving maze of Web3, Labyrnth is your guide to ever-growing success."
+    },
+    "socials": {
+      "heading": "Socials",
+      "links": ["X", "Instagram", "Telegram", "Discord"]
+    },
+    "menu": {
+      "heading": "Menu",
+      "links": ["About Us", "Services", "Out Works", "Reviews"]
+    },
+    "contact": {
+      "heading": "Contact",
+      "phone": "(123) 456-7890",
+      "email": "exampleemail@gmail.com",
+      "address": "1234 Elm Street, Apartment 5B, Los Angeles, CA 90015, USA"
+    }
+  },
+  "menu": {
+    "button": "MENU",
+    "items": ["About us", "Services", "Our works", "Reviews"],
+    "contact": {
+      "phone": "(123) 456-7890",
+      "email": "exampleemail@gmail.com",
+      "address": "1234 Elm Street, Apartment 5B, Los Angeles, CA 90015, USA"
+    }
+  }
+}

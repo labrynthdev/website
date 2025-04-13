@@ -3,9 +3,10 @@
 import Dots from "@/components/ui/dots";
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
-// import { TextAnimate } from "@/components/magicui/text-animate";
 import Image from "next/image";
 import { BlurFade } from "@/components/magicui/blur-fade";
+import textData from "@/lib/text-data";
+import { scrollToHash } from "@/lib/utils";
 
 export default function Hero() {
   return (
@@ -21,21 +22,8 @@ export default function Hero() {
         }}
         className="text-[6rem] sm:text-[10rem] md:text-[12rem] lg:text-[15rem] xl:text-[20rem] font-semibold"
       >
-        <p className="inline">
-          {/* animation="slideUp" by="character"> */}
-          la
-        </p>
-        <motion.div
-          //   initial={{ scale: 0 }}
-          //   animate={{
-          //     scale: 1,
-          //   }}
-          //   transition={{
-          //     duration: 0.5,
-          //     delay: 0.2,
-          //   }}
-          className="inline-block"
-        >
+        <p className="inline">la</p>
+        <motion.div className="inline-block">
           <Image
             src="/letters/b.png"
             alt="b"
@@ -44,21 +32,8 @@ export default function Hero() {
             className="inline  w-[4.5rem] mb-4 sm:w-[6.5rem] sm:mb-3 md:w-[8rem] md:mb-5 lg:w-[11rem] lg:mb-6 xl:w-[14rem] xl:mb-10"
           />
         </motion.div>
-        <p className="inline">
-          {/* animation="slideUp" by="character" delay={0.4}> */}
-          yrn
-        </p>
-        <motion.div
-          //   initial={{ scale: 0 }}
-          //   animate={{
-          //     scale: 1,
-          //   }}
-          //   transition={{
-          //     duration: 0.5,
-          //     delay: 0.6,
-          //   }}
-          className="inline-block"
-        >
+        <p className="inline">yrn</p>
+        <motion.div className="inline-block">
           <Image
             src="/letters/t.png"
             alt="t"
@@ -67,13 +42,7 @@ export default function Hero() {
             className="inline w-[3.5rem] mb-4 sm:w-[5.5rem] sm:mb-4 md:w-[6rem] md:mb-4 lg:w-[9rem] lg:mb-8 xl:w-[12rem] xl:mb-10"
           />
         </motion.div>
-        <p className="inline">
-          {/* animation="slideUp"
-          by="character"
-          delay={0.8}
-        > */}
-          h
-        </p>
+        <p className="inline">h</p>
       </motion.h1>
 
       <div className="relative w-full flex flex-col  items-center">
@@ -115,11 +84,11 @@ export default function Hero() {
                 className="w-[6rem] md:w-[6rem] lg:w-[8rem] xl:w-[10rem]"
               />
               <h1 className="text-[2rem] sm:text-[2rem] lg:text-[3rem] xl:text-[4rem] font-semibold">
-                2M+
+                {textData.hero.stats.value}
               </h1>
             </div>
             <div className="text-[#717171] max-w-auto sm:max-w-[8rem] md:max-w-auto">
-              Lorem ipsum dolor sit amet
+              {textData.hero.stats.description}
             </div>
           </BlurFade>
 
@@ -129,8 +98,7 @@ export default function Hero() {
             duration={0.4}
             className="w-42 align-middle text-[#717171] max-w-full sm:max-w-[8rem] md:max-w-full text-left sm:text-right "
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            {textData.hero.description_1}
           </BlurFade>
         </div>
 
@@ -144,9 +112,12 @@ export default function Hero() {
             className="w-full sm:w-82 align-middle text-black flex flex-col mx-5 xl:mx-0"
             inView
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            <Dots className="hidden sm:block " count={30} />
+            {!!textData.hero.description_2 && (
+              <>
+                {textData.hero.description_2}
+                <Dots className="hidden sm:block " count={30} />
+              </>
+            )}
           </BlurFade>
 
           <BlurFade
@@ -154,12 +125,14 @@ export default function Hero() {
             className="justify-end mt-5 md:mt-0 w-full sm:w-auto flex md:block"
           >
             <motion.a
-              href="/"
+              onClick={() => {
+                scrollToHash("services");
+              }}
               className="flex flex-col items-center justify-center rounded-full bg-[#D1FF58] h-[120px] w-[120px]"
               whileHover={{ scale: 1.15 }}
               whileTap={{ scale: 0.85 }}
             >
-              Explore
+              {textData.hero.cta}
               <ChevronDown className="w-4 h-4" />
             </motion.a>
           </BlurFade>

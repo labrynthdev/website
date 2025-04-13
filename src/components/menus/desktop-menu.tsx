@@ -11,11 +11,12 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import SquaresIcon from "../icons/squares";
+import textData from "@/lib/text-data";
 
 export function MainMenu({
-  scrolltoHash,
+  scrollToHash,
 }: {
-  scrolltoHash: (element_id: string) => void;
+  scrollToHash: (element_id: string) => void;
 }) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -54,7 +55,7 @@ export function MainMenu({
 
           <div className="space-y-8 ">
             <DropdownMenuItem
-              onSelect={() => scrolltoHash("about-us")}
+              onSelect={() => scrollToHash("about-us")}
               className="flex justify-between items-center p-2 px-4 cursor-pointer  focus:text-white focus:bg-zinc-800 hover:bg-zinc-800 font-medium text-md sm:text-xl"
             >
               About us
@@ -62,7 +63,7 @@ export function MainMenu({
             </DropdownMenuItem>
 
             <DropdownMenuItem
-              onSelect={() => scrolltoHash("services")}
+              onSelect={() => scrollToHash("services")}
               className="flex justify-between items-center p-2 px-4 cursor-pointer font-medium focus:text-white focus:bg-zinc-800 hover:bg-zinc-80 text-md sm:text-xl"
             >
               Services
@@ -70,7 +71,7 @@ export function MainMenu({
             </DropdownMenuItem>
 
             <DropdownMenuItem
-              onSelect={() => scrolltoHash("our-works")}
+              onSelect={() => scrollToHash("our-works")}
               className="flex justify-between items-center p-2 px-4 cursor-pointer font-medium focus:text-white focus:bg-zinc-800 hover:bg-zinc-80 text-md sm:text-xl"
             >
               Our works
@@ -78,7 +79,7 @@ export function MainMenu({
             </DropdownMenuItem>
 
             <DropdownMenuItem
-              onSelect={() => scrolltoHash("reviews")}
+              onSelect={() => scrollToHash("reviews")}
               className="flex justify-between items-center p-2 px-4 cursor-pointer font-medium focus:text-white focus:bg-zinc-800 hover:bg-zinc-80 text-md sm:text-xl"
             >
               Reviews
@@ -90,10 +91,14 @@ export function MainMenu({
         <DropdownMenuSeparator className="h-px bg-[#333333] my-4" />
 
         <div className="p-6 pt-2 space-y-4">
-          <div className="text-md font-bold sm:text-2xl">(123) 456-7890</div>
-          <div className="text-md sm:text-sm">exampleemail@gmail.com</div>
+          <div className="text-md font-bold sm:text-2xl">
+            {textData.footer.contact.phone}
+          </div>
           <div className="text-md sm:text-sm">
-            1234 Elm Street, Apartment 5B, Los Angeles, CA 90015, USA
+            {textData.footer.contact.email}
+          </div>
+          <div className="text-md sm:text-sm">
+            {textData.footer.contact.address}
           </div>
         </div>
       </DropdownMenuContent>

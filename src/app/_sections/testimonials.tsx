@@ -1,4 +1,5 @@
 import { Marquee } from "@/components/magicui/marquee";
+import textData from "@/lib/text-data";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 
@@ -9,35 +10,16 @@ export default function Testimonials({
   className: string;
   id: string;
 }) {
-  const reviews = [
-    {
-      name: "Jack Doe",
-      title: "CEO, Doe Inc.",
-      body: "I've never seen anything like this before. It's amazing. I love it.",
-      img: "/img/john-do.jpeg",
-    },
-    {
-      name: "Jill Doe",
-      title: "CEO, Doe Inc.",
-      body: "I don't know what to say. I'm speechless. This is amazing.",
-      img: "/img/john-do.jpeg",
-    },
-    {
-      name: "James Smith",
-      title: "CEO, Doe Inc.",
-      body: "I'm at a loss for words. This is amazing. I love it.",
-      img: "/img/john-do.jpeg",
-    },
-  ];
-
   return (
     <section id={id} className={className}>
       <div className="grid grid-cols-1 lg:grid-cols-5 max-w-7xl mx-auto px-5 xl:px-0">
         <div className="col-span-3">
           <h1 className="text-4xl lg:text-6xl font-medium text-center lg:text-left">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            {textData.testimonials.heading}
             <br />
-            <span className="text-[#77A21C]">sed do eiusmod.</span>
+            <span className="text-[#77A21C]">
+              {textData.testimonials.heading_sub}
+            </span>
           </h1>
         </div>
         {/* <div className="flex items-end gap-2 col-span-2 justify-center lg:justify-end mt-4 lg:mt-0">
@@ -55,7 +37,7 @@ export default function Testimonials({
           {/* <Image src="/images/testimonials/testimonial-1.png" alt="Testimonial" width={100} height={100} /> */}
           <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
             <Marquee pauseOnHover className="[--duration:20s]">
-              {reviews.map((review) => (
+              {textData.testimonials.reviews.map((review) => (
                 <Card key={review.name} {...review} />
               ))}
             </Marquee>

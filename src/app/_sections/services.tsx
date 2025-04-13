@@ -10,6 +10,7 @@ import {
 import { AccordionHeader } from "@radix-ui/react-accordion";
 import { useState } from "react";
 import Image from "next/image";
+import textData from "@/lib/text-data";
 
 export default function Services({
   id,
@@ -43,13 +44,12 @@ export default function Services({
           size="xl"
         >
           <span className="w-2 h-2 bg-[#77A21C] rounded-full"></span>
-          Our Services
+          {textData.services.button}
         </Button>
       </div>
       <div className="col-span-3">
         <h1 className="text-4xl lg:text-6xl font-medium">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod.
+          {textData.services.heading}
         </h1>
 
         <Accordion
@@ -69,7 +69,7 @@ export default function Services({
                 className="text-2xl font-bold text-[#000000] hover:no-underline flex justify-between items-center cursor-pointer"
                 onClick={() => handleToggle("item-1")}
               >
-                Lorem ipsum dolor
+                {textData.services.items[0].title}
                 <Button
                   onClick={() => handleToggle("item-1")}
                   variant="outline"
@@ -96,15 +96,12 @@ export default function Services({
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
                 <div className="col-span-1">
                   <h3 className="text-xl font-bold text-[#000000]">
-                    Section Content
+                    {textData.services.items[0].content.heading}
                   </h3>
                 </div>
                 <div className="col-span-2">
                   <p className="text-[#717171]">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    {textData.services.items[0].content.description}
                   </p>
                 </div>
               </div>
@@ -119,7 +116,7 @@ export default function Services({
                 className="text-2xl font-bold text-[#000000] hover:no-underline flex justify-between items-center cursor-pointer"
                 onClick={() => handleToggle("item-2")}
               >
-                Lorem ipsum dolor
+                {textData.services.items[1].title}
                 <Button
                   onClick={() => handleToggle("item-2")}
                   variant="outline"
@@ -139,15 +136,12 @@ export default function Services({
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="col-span-1">
                   <h3 className="text-xl font-bold text-[#000000]">
-                    Section Content
+                    {textData.services.items[1].content.heading}
                   </h3>
                 </div>
                 <div className="col-span-2">
                   <p className="text-[#717171]">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    {textData.services.items[1].content.description}
                   </p>
                 </div>
               </div>
@@ -163,7 +157,7 @@ export default function Services({
                 className="text-2xl font-bold text-[#000000] hover:no-underline flex justify-between items-center cursor-pointer"
                 onClick={() => handleToggle("item-3")}
               >
-                Lorem ipsum dolor
+                {textData.services.items[2].title}
                 <Button
                   onClick={() => handleToggle("item-3")}
                   variant="outline"
@@ -183,15 +177,53 @@ export default function Services({
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="col-span-1">
                   <h3 className="text-xl font-bold text-[#000000]">
-                    Section Content
+                    {textData.services.items[2].content.heading}
                   </h3>
                 </div>
                 <div className="col-span-2">
                   <p className="text-[#717171]">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    {textData.services.items[2].content.description}
+                  </p>
+                </div>
+              </div>
+            </AccordionContent>
+          </AccordionItem>
+
+          <AccordionItem
+            value="item-4"
+            className="border-b border-[#cacaca] py-6"
+          >
+            <AccordionHeader>
+              <div
+                className="text-2xl font-bold text-[#000000] hover:no-underline flex justify-between items-center cursor-pointer"
+                onClick={() => handleToggle("item-4")}
+              >
+                {textData.services.items[3].title}
+                <Button
+                  onClick={() => handleToggle("item-4")}
+                  variant="outline"
+                  size="xl"
+                  className={`text-lg  cursor-pointer ${
+                    value === "item-4"
+                      ? "bg-black text-white hover:bg-black hover:text-white"
+                      : "bg-transparent text-black hover:bg-transparent hover:text-black"
+                  }`}
+                >
+                  {value === "item-4" ? "View less" : "View more"}
+                </Button>
+              </div>
+            </AccordionHeader>
+
+            <AccordionContent className="pt-6">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="col-span-1">
+                  <h3 className="text-xl font-bold text-[#000000]">
+                    {textData.services.items[3].content.heading}
+                  </h3>
+                </div>
+                <div className="col-span-2">
+                  <p className="text-[#717171]">
+                    {textData.services.items[3].content.description}
                   </p>
                 </div>
               </div>

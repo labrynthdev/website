@@ -5,18 +5,24 @@ import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
-import { scrolltoHash } from "@/lib/utils";
+import { scrollToHash } from "@/lib/utils";
+import textData from "@/lib/text-data";
 
 export default function Footer({ className }: { className: string }) {
+  const links: { [key: string]: string } = {
+    X: "https://x.com/LabyrnthCo",
+    Instagram: "https://www.instagram.com",
+    Telegram: "https://t.me",
+    Discord: "https://discord.com",
+  };
+
   return (
     <footer className={cn(className, "px-5 xl:px-0")}>
       <div className="rounded-2xl bg-gradient-to-br from-[#323232] to-[#141414] flex flex-col items-center overflow-hidden shadow-2xl">
-        <h1 className="text-white text-lg mt-10">
-          Looking for the right path?
-        </h1>
+        <h1 className="text-white text-lg mt-10">{textData.footer.heading}</h1>
         <Marquee>
           <div className="flex items-center text-4xl md:text-6xl font-semibold text-white ml-6 mt-6">
-            Navigate success with Labrynth
+            {textData.footer.tagline}
             <Image
               src="/logo-green.svg"
               alt="logo"
@@ -41,89 +47,67 @@ export default function Footer({ className }: { className: string }) {
                 height={20}
                 className="w-12 h-12"
               />
-              Labrynth
+              {textData.footer.brand.name}
             </h1>
             <p className="text-white text-xl mt-2 lg:max-w-[25rem]">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
+              {textData.footer.brand.description}
             </p>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 md:gap-8 ">
             <div>
-              <h3 className="font-semibold text-[#FFFFFF66] mb-4">Socials</h3>
+              <h3 className="font-semibold text-[#FFFFFF66] mb-4">
+                {textData.footer.socials.heading}
+              </h3>
               <ul className="space-y-2">
-                <li>
-                  <Link
-                    target="_blank"
-                    href="https://www.instagram.com/labrynth.ai/"
-                    className="text-white hover:text-gray-300"
-                  >
-                    Instagram
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    target="_blank"
-                    href="https://www.facebook.com/labrynth.ai/"
-                    className="text-white hover:text-gray-300"
-                  >
-                    Facebook
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    target="_blank"
-                    href="https://www.linkedin.com/company/labrynth-ai/"
-                    className="text-white hover:text-gray-300"
-                  >
-                    LinkedIn
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    target="_blank"
-                    href="https://wa.me/1234567890"
-                    className="text-white hover:text-gray-300"
-                  >
-                    Whatsapp
-                  </Link>
-                </li>
+                {textData.footer.socials.links.map((link: string, index) => (
+                  <li key={index}>
+                    <Link
+                      target="_blank"
+                      href={links[link]}
+                      className="text-white hover:text-gray-300"
+                    >
+                      {link}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
 
             <div>
-              <h3 className="font-semibold text-[#FFFFFF66] mb-4">Menu</h3>
+              <h3 className="font-semibold text-[#FFFFFF66] mb-4">
+                {textData.footer.menu.heading}
+              </h3>
               <ul className="space-y-2">
                 <li
-                  onClick={() => scrolltoHash("about-us")}
+                  onClick={() => scrollToHash("about-us")}
                   className="text-white hover:text-gray-300 cursor-pointer"
                 >
-                  About Us
+                  {textData.footer.menu.links[0]}
                 </li>
                 <li
                   className="text-white hover:text-gray-300 cursor-pointer"
-                  onClick={() => scrolltoHash("services")}
+                  onClick={() => scrollToHash("services")}
                 >
-                  Services
+                  {textData.footer.menu.links[1]}
                 </li>
                 <li
                   className="text-white hover:text-gray-300 cursor-pointer"
-                  onClick={() => scrolltoHash("our-works")}
+                  onClick={() => scrollToHash("our-works")}
                 >
-                  Out Works
+                  {textData.footer.menu.links[2]}
                 </li>
                 <li
                   className="text-white hover:text-gray-300 cursor-pointer"
-                  onClick={() => scrolltoHash("reviews")}
+                  onClick={() => scrollToHash("reviews")}
                 >
-                  Reviews
+                  {textData.footer.menu.links[3]}
                 </li>
               </ul>
             </div>
 
             <div className="col-span-2 sm:col-span-1 flex flex-col items-left lg:block mt-0 sm:mt-0">
               <h3 className="font-semibold text-[#FFFFFF66] mb-4 text-center sm:text-left">
-                Contact
+                {textData.footer.contact.heading}
               </h3>
               <ul className="space-y-2">
                 <li>
@@ -131,7 +115,7 @@ export default function Footer({ className }: { className: string }) {
                     href="tel:+1234567890"
                     className="text-white hover:text-gray-300"
                   >
-                    (123) 456-7890
+                    {textData.footer.contact.phone}
                   </Link>
                 </li>
                 <li>
@@ -139,11 +123,11 @@ export default function Footer({ className }: { className: string }) {
                     href="mailto:exampleemail@gmail.com"
                     className="text-white hover:text-gray-300"
                   >
-                    exampleemail@gmail.com
+                    {textData.footer.contact.email}
                   </Link>
                 </li>
                 <li className="text-white ">
-                  1234 Elm Street, Apartment 5B, Los Angeles, CA 90015, USA
+                  {textData.footer.contact.address}
                 </li>
               </ul>
             </div>
@@ -152,7 +136,7 @@ export default function Footer({ className }: { className: string }) {
 
         <div className="grid grid-cols-2 sm:grid-cols-3 mt-10 mb-10">
           <p className="text-sm text-[#FFFFFF66] px-4 text-center hidden sm:block">
-            © 2025 Labrynth Inc.
+            © 2025 {textData.footer.brand.name} Inc.
           </p>
           <p className=" text-sm text-[#FFFFFF66]   px-4 text-center">
             Terms & Conditions
@@ -161,7 +145,7 @@ export default function Footer({ className }: { className: string }) {
             Privacy Policy
           </p>
           <p className="text-sm text-[#FFFFFF66] px-4 mt-5 text-center col-span-3 sm:hidden">
-            © 2025 Labrynth Inc.
+            © 2025 {textData.footer.brand.name} Inc.
           </p>
         </div>
       </div>
