@@ -25,6 +25,7 @@ export default function Hero() {
         <p className="inline">la</p>
         <motion.div className="inline-block">
           <Image
+            priority={true}
             src="/letters/b.png"
             alt="b"
             width={220}
@@ -35,6 +36,7 @@ export default function Hero() {
         <p className="inline">yrn</p>
         <motion.div className="inline-block">
           <Image
+            priority={true}
             src="/letters/t.png"
             alt="t"
             width={180}
@@ -60,6 +62,7 @@ export default function Hero() {
           className="absolute -top-[95px]  sm:-top-[120px] md:-top-[160px] lg:-top-[200px] xl:-top-[250px]  align-center z-0"
         >
           <Image
+            priority={true}
             alt="labyrinth"
             width={730}
             height={600}
