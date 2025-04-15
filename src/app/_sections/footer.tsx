@@ -135,8 +135,8 @@ export default function Footer({ className }: { className: string }) {
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 mt-10 mb-10">
-          <p className="text-sm text-[#FFFFFF66] px-4 text-center hidden sm:block">
-            © 2025 {textData.footer.brand.name} Inc.
+          <p className="text-sm text-[#FFFFFF66] px-4 text-center hidden sm:hidden">
+            {/* © 2025 {textData.footer.brand.name} Inc. */}
           </p>
           <p className=" text-sm text-[#FFFFFF66]   px-4 text-center">
             {/* Terms & Conditions */}
@@ -144,7 +144,7 @@ export default function Footer({ className }: { className: string }) {
           <p className=" text-sm text-[#FFFFFF66]  px-4 text-center">
             {/* Privacy Policy */}
           </p>
-          <p className="text-sm text-[#FFFFFF66] px-4 mt-5 text-center col-span-3 sm:hidden">
+          <p className="text-sm text-[#FFFFFF66] px-4 mt-5 text-center col-span-3 sm:block">
             © 2025 {textData.footer.brand.name} Inc.
           </p>
         </div>
