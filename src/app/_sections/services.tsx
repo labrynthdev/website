@@ -100,7 +100,7 @@ export default function Services({
                   </h3>
                 </div>
                 <div className="col-span-2">
-                  <p className="text-[#717171]">
+                  <p className="text-[#717171] text-xl">
                     {textData.services.items[0].content.description}
                   </p>
                 </div>
@@ -140,7 +140,7 @@ export default function Services({
                   </h3>
                 </div>
                 <div className="col-span-2">
-                  <p className="text-[#717171]">
+                  <p className="text-[#717171] text-xl">
                     {textData.services.items[1].content.description}
                   </p>
                 </div>
@@ -181,7 +181,7 @@ export default function Services({
                   </h3>
                 </div>
                 <div className="col-span-2">
-                  <p className="text-[#717171]">
+                  <p className="text-[#717171] text-xl">
                     {textData.services.items[2].content.description}
                   </p>
                 </div>
@@ -222,7 +222,7 @@ export default function Services({
                   </h3>
                 </div>
                 <div className="col-span-2">
-                  <p className="text-[#717171]">
+                  <p className="text-[#717171] text-xl">
                     {textData.services.items[3].content.description}
                   </p>
                 </div>

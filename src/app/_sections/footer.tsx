@@ -11,9 +11,9 @@ import textData from "@/lib/text-data";
 export default function Footer({ className }: { className: string }) {
   const links: { [key: string]: string } = {
     X: "https://x.com/LabyrnthCo",
-    Instagram: "https://www.instagram.com",
-    Telegram: "https://t.me",
-    Discord: "https://discord.com",
+    // Instagram: "https://www.instagram.com",
+    // Telegram: "https://t.me",
+    // Discord: "https://discord.com",
   };
 
   return (
@@ -33,8 +33,8 @@ export default function Footer({ className }: { className: string }) {
           </div>
         </Marquee>
 
-        <div className="w-full px-5 ">
-          <Separator className="max-w-4xl mt-5 w-full  bg-[#3d3d3d]" />
+        <div className="w-full px-5 flex items-center justify-center ">
+          <Separator className="max-w-5xl mt-5 w-full  bg-[#3d3d3d]" />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 px-5 mt-5 gap-y-5 gap-x-2 w-full">
@@ -53,7 +53,7 @@ export default function Footer({ className }: { className: string }) {
               {textData.footer.brand.description}
             </p>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 md:gap-8 ">
+          <div className="grid grid-cols-2 sm:grid-cols-2 gap-2 md:gap-8 ">
             <div>
               <h3 className="font-semibold text-[#FFFFFF66] mb-4">
                 {textData.footer.socials.heading}
@@ -100,12 +100,12 @@ export default function Footer({ className }: { className: string }) {
                   className="text-white hover:text-gray-300 cursor-pointer"
                   onClick={() => scrollToHash("reviews")}
                 >
-                  {textData.footer.menu.links[3]}
+                  {/* {textData.footer.menu.links[3]} */}
                 </li>
               </ul>
             </div>
 
-            <div className="col-span-2 sm:col-span-1 flex flex-col items-left lg:block mt-0 sm:mt-0">
+            {/*<div className="col-span-2 sm:col-span-1 flex flex-col items-left lg:block mt-0 sm:mt-0">
               <h3 className="font-semibold text-[#FFFFFF66] mb-4 text-center sm:text-left">
                 {textData.footer.contact.heading}
               </h3>
@@ -129,8 +129,8 @@ export default function Footer({ className }: { className: string }) {
                 <li className="text-white ">
                   {textData.footer.contact.address}
                 </li>
-              </ul>
-            </div>
+              </ul> 
+            </div>*/}
           </div>
         </div>
 
@@ -139,10 +139,10 @@ export default function Footer({ className }: { className: string }) {
             © 2025 {textData.footer.brand.name} Inc.
           </p>
           <p className=" text-sm text-[#FFFFFF66]   px-4 text-center">
-            Terms & Conditions
+            {/* Terms & Conditions */}
           </p>
           <p className=" text-sm text-[#FFFFFF66]  px-4 text-center">
-            Privacy Policy
+            {/* Privacy Policy */}
           </p>
           <p className="text-sm text-[#FFFFFF66] px-4 mt-5 text-center col-span-3 sm:hidden">
             © 2025 {textData.footer.brand.name} Inc.
