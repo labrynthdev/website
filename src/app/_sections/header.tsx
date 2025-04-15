@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import BookCallButtons from "../../components/buttons/book-call-button";
+// import BookCallButtons from "../../components/buttons/book-call-button";
 import { MainMenu } from "../../components/menus/desktop-menu";
 import Link from "next/link";
 import { scrollToHash } from "@/lib/utils";
@@ -12,7 +12,7 @@ export default function Header({ className }: { className: string }) {
     <header className={className}>
       <nav
         aria-label="Global"
-        className="mx-auto grid-cols-3 sm:px-0 sm:py-0 lg:px-8 hidden sm:grid"
+        className="mx-auto grid-cols-3 my-4 sm:px-0 sm:py-0 lg:px-8 hidden sm:grid"
       >
         <div className="flex items-center justify-start">
           <MainMenu scrollToHash={scrollToHash} />
@@ -22,7 +22,7 @@ export default function Header({ className }: { className: string }) {
           <Image src="/logo_3x.svg" alt="Logo" width={50} height={50} />
         </Link>
         <div className="flex items-center justify-end">
-          <BookCallButtons />
+          {/* <BookCallButtons /> */}
         </div>
       </nav>
 

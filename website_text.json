@@ -278,10 +278,10 @@
       "links": ["About Us", "Services", "Out Works", "Reviews"]
     },
     "contact": {
-      "heading": "Contact",
-      "phone": "(123) 456-7890",
-      "email": "exampleemail@gmail.com",
-      "address": "1234 Elm Street, Apartment 5B, Los Angeles, CA 90015, USA"
+      "heading": "",
+      "phone": "",
+      "email": "",
+      "address": ""
     }
   },
   "menu": {
