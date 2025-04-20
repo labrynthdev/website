@@ -1,6 +1,6 @@
 {
   "header": {
-    "company_name": "Labrynth",
+    "company_name": "Labyrnth",
     "brand_name": "Labyrnth"
   },
   "hero": {
@@ -75,8 +75,8 @@
       "sub": "your project deserves with an experienced touch"
     },
     "comparison": {
-      "before": "Before Labrynth",
-      "after": "After Labrynth"
+      "before": "Before Labyrnth",
+      "after": "After Labyrnth"
     },
     "section": {
       "tag": "All-in-one",
@@ -140,7 +140,7 @@
     "items": [
       {
         "name": "MemeFi",
-        "description": "My partnership with MemeFi in their SocialFi Campaign propelled their success to new heights. I was responsible for their content marketing and helping with their new Game-Fi experience.",
+        "description": "Our partnership with MemeFi in their SocialFi Campaign propelled their success to new heights. We were responsible for their content marketing and helping with their new Game-Fi experience.",
         "stats": [
           {
             "value": "1M+",
@@ -154,7 +154,7 @@
       },
       {
         "name": "Lingocoins",
-        "description": "My partnership with Lingo Coin in their SocialFi Campaign propelled their success to new heights. I was responsible for their content marketing and helping with their new gamified SocialFi experience.",
+        "description": "Our partnership with Lingo Coin in their SocialFi Campaign propelled their success to new heights. We were responsible for their content marketing and helping with their new gamified SocialFi experience.",
         "stats": [
           {
             "value": "8K+",
@@ -168,7 +168,7 @@
       },
       {
         "name": "Atleta Network",
-        "description": "I led a KOL marketing campaign in with Turkish KOLs, significantly increasing our reach by onboarding thousands and leveraging local influencers to educate our target audience. This strategic initiative greatly enhanced our market presence and influence.",
+        "description": "We led a KOL marketing campaign in Turkey with Turkish KOLs, significantly increasing our reach by onboarding thousands and leveraging local influencers to educate our target audience. This strategic initiative greatly enhanced our market presence and influence.",
         "stats": [
           {
             "value": "1M",
@@ -190,7 +190,7 @@
       },
       {
         "name": "AiMonica Brands",
-        "description": "My partnership with AiMonica Brands in their Memecoin Campaign propelled their success to new heights. I was responsible for KOLs' tweets.",
+        "description": "Our partnership with AiMonica Brands in their Memecoin Campaign propelled their success to new heights. We were responsible for KOLs' tweets.",
         "stats": [
           {
             "value": "168K",
@@ -264,9 +264,9 @@
   },
   "footer": {
     "heading": "Looking for the right path?",
-    "tagline": "Navigate success with Labrynth",
+    "tagline": "Navigate success with Labyrnth",
     "brand": {
-      "name": "Labrynth",
+      "name": "Labyrnth",
       "description": "In the ever-evolving maze of Web3, Labyrnth is your guide to ever-growing success."
     },
     "socials": {

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
-
+import { Analytics } from "@vercel/analytics/react";
 const bricolageGrotesque = Bricolage_Grotesque({
   variable: "--font-bricolage-grotesque",
   subsets: ["latin"],
@@ -15,13 +15,13 @@ export const metadata: Metadata = {
     type: "website",
     title: "Labyrnth Co",
     description: "Labyrnth Co",
-    url: "https://website-labrynths-projects.vercel.app/img/banner.png",
+    url: "https://website-labyrnths-projects.vercel.app/img/banner.png",
     siteName: "Labyrnth Co",
     images: [
       {
         width: 655,
         height: 336,
-        url: `https://website-labrynths-projects.vercel.app/img/banner.png`,
+        url: `https://website-labyrnths-projects.vercel.app/img/banner.png`,
       },
     ],
   },
@@ -37,6 +37,7 @@ export default function RootLayout({
       <body
         className={`${bricolageGrotesque.variable} antialiased bg-[#F3F3F3] flex`}
       >
+        <Analytics />
         {children}
       </body>
     </html>

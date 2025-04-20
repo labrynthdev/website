@@ -214,8 +214,8 @@ export default function ContentGenerator() {
           sub: "adipiscing elit",
         },
         comparison: {
-          before: "Before Labrynth",
-          after: "After Labrynth",
+          before: "Before Labyrnth",
+          after: "After Labyrnth",
         },
         section: {
           tag: "Lorem ipsum dolor sit amet",
@@ -272,9 +272,9 @@ export default function ContentGenerator() {
       },
       footer: {
         heading: "Looking for the right path?",
-        tagline: "Navigate success with Labrynth",
+        tagline: "Navigate success with Labyrnth",
         brand: {
-          name: "Labrynth",
+          name: "Labyrnth",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         },
