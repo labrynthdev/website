@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 import { Button } from "../ui/button";
+import Link from "next/link";
+
 export default function BookCallButtons() {
   return (
     <div className="flex flex-col sm:flex-row gap-4 justify-center items-center p-6">
@@ -10,9 +12,14 @@ export default function BookCallButtons() {
         whileTap={{ scale: 0.95 }}
         transition={{ type: "spring", stiffness: 400, damping: 17 }}
       >
-        <Button className="shadow-xl shadow-black/30 px-6 h-12 text-lg">
-          Book a Call
-        </Button>
+        <Link
+          target="_blank"
+          href="https://calendly.com/labyrnthco/labyrnth-meeting-30-min"
+        >
+          <Button className="shadow-xl shadow-black/30 px-6 h-12 text-lg">
+            Book a Call
+          </Button>
+        </Link>
       </motion.div>
     </div>
   );

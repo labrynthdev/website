@@ -9,7 +9,6 @@ import {
 } from "@/components/ui/accordion";
 import { AccordionHeader } from "@radix-ui/react-accordion";
 import { useState } from "react";
-import Image from "next/image";
 import textData from "@/lib/text-data";
 
 export default function Services({
@@ -86,13 +85,6 @@ export default function Services({
             </AccordionHeader>
 
             <AccordionContent className="pt-6">
-              <Image
-                src="/img/accordion-bg.png"
-                alt="Service 1"
-                width={1504}
-                height={1128}
-                className="w-full h-[402px] object-cover"
-              />
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
                 <div className="col-span-1">
                   <h3 className="text-xl font-bold text-[#000000]">

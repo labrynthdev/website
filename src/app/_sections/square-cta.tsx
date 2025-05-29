@@ -2,6 +2,7 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import textData from "@/lib/text-data";
+import Link from "next/link";
 
 export default function SquareCta({ className }: { className: string }) {
   return (
@@ -44,20 +45,25 @@ export default function SquareCta({ className }: { className: string }) {
         <p className="text-center max-w-xl">
           {textData.square_cta.description}
         </p>
-        <motion.div
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.95 }}
-          transition={{ type: "spring", stiffness: 400, damping: 17 }}
-          className="mx-2 mt-5"
+        <Link
+          target="_blank"
+          href="https://calendly.com/labyrnthco/labyrnth-meeting-30-min"
         >
-          <Image
-            src="/assets/call-cta.svg"
-            width={150}
-            height={50}
-            alt="avatars"
-            className="w-32 sm:w-24 md:w-32 lg:w-40"
-          />
-        </motion.div>
+          <motion.div
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: "spring", stiffness: 400, damping: 17 }}
+            className="mx-2 mt-5"
+          >
+            <Image
+              src="/assets/call-cta.svg"
+              width={150}
+              height={50}
+              alt="avatars"
+              className="w-32 sm:w-24 md:w-32 lg:w-40"
+            />
+          </motion.div>
+        </Link>
       </div>
     </section>
   );

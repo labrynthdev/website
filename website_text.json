@@ -149,6 +149,10 @@
           {
             "value": "10M+",
             "description": "Impressions"
+          },
+          {
+            "value": "7K+",
+            "description": "Onboarded Members"
           }
         ]
       },
@@ -175,11 +179,11 @@
             "description": "Views"
           },
           {
-            "value": "2k",
+            "value": "15k+",
             "description": "Likes"
           },
           {
-            "value": "2.3k+",
+            "value": "1.3k+",
             "description": "New Users"
           },
           {

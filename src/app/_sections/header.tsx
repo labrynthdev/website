@@ -6,6 +6,7 @@ import { MainMenu } from "../../components/menus/desktop-menu";
 import Link from "next/link";
 import { scrollToHash } from "@/lib/utils";
 import textData from "@/lib/text-data";
+import BookCallButtons from "@/components/buttons/book-call-button";
 
 export default function Header({ className }: { className: string }) {
   return (
@@ -22,7 +23,7 @@ export default function Header({ className }: { className: string }) {
           <Image src="/logo_3x.svg" alt="Logo" width={50} height={50} />
         </Link>
         <div className="flex items-center justify-end">
-          {/* <BookCallButtons /> */}
+          <BookCallButtons />
         </div>
       </nav>
 

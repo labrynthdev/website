@@ -17,6 +17,7 @@ import {
 } from "@/components/ui/accordion-unstyled";
 import { Separator } from "@/components/ui/separator";
 import textData from "@/lib/text-data";
+import Link from "next/link";
 
 export default function Cases({
   id,
@@ -33,9 +34,14 @@ export default function Cases({
         <h1 className="text-4xl font-medium w-full sm:w-[25rem] md:w-[30rem] text-center sm:text-left">
           {textData.cases.heading}
         </h1>
-        <Button className="text-lg shadow-2xl" size="xl">
-          {textData.cases.cta}
-        </Button>
+        <Link
+          target="_blank"
+          href="https://calendly.com/labyrnthco/labyrnth-meeting-30-min"
+        >
+          <Button className="text-lg shadow-2xl" size="xl">
+            {textData.cases.cta}
+          </Button>
+        </Link>
       </div>
       <div className="mt-8" suppressHydrationWarning>
         <HorizontalAccordion
