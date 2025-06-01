@@ -99,7 +99,7 @@ export default function Hero() {
             direction="up"
             delay={0.6}
             duration={0.4}
-            className="w-42 align-middle text-[#717171] max-w-full sm:max-w-[8rem] md:max-w-full text-left sm:text-right "
+            className="w-42 align-middle text-[#717171] max-w-full sm:max-w-[8rem] md:max-w-full text-left sm:text-right italic"
           >
             {textData.hero.description_1}
           </BlurFade>

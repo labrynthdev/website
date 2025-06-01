@@ -21,9 +21,9 @@
       "label": "PROJECTS",
       "value": "300+"
     },
-    "followers": {
-      "label": "FOLLOWERS",
-      "value": "90K"
+    "impressions": {
+      "label": "IMPRESSIONS",
+      "value": "1+"
     },
     "happy_clients": {
       "label": "HAPPY CLIENTS",
@@ -80,7 +80,7 @@
     },
     "section": {
       "tag": "All-in-one",
-      "heading": "Web3 expertise for everything from NFTs to DeFi"
+      "heading": "From A to Z marketing services you need"
     },
     "marquee": "Labyrnth"
   },
@@ -119,6 +119,17 @@
         "content": {
           "heading": "",
           "description": "Growing your socials including Discord, Telegram and Twitter while helping you to manage them."
+        }
+      },
+      {
+        "title": "Technical Support",
+        "button": {
+          "view_more": "View more",
+          "view_less": "View less"
+        },
+        "content": {
+          "heading": "",
+          "description": "Developing Telegram mini-apps, top-quality websites and giving technical support to help your brand revive."
         }
       },
       {

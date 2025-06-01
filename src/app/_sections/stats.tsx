@@ -12,7 +12,7 @@ export default function Stats({ className }: { className: string }) {
           <Dots className="" count={12} />
           <span className="">{textData.stats.clients.label}</span>
           <h1 className=" font-semibold text-5xl lg:text-7xl my-0">
-            <NumberTicker value={200} />
+            <NumberTicker value={50} />
             <span className="text-[#9BD500]">+</span>
           </h1>
         </div>
@@ -22,17 +22,17 @@ export default function Stats({ className }: { className: string }) {
           <span className="">{textData.stats.projects.label}</span>
 
           <h1 className=" font-semibold text-5xl lg:text-7xl my-0">
-            <NumberTicker value={300} />
+            <NumberTicker value={120} />
             <span className="text-[#9BD500]">+</span>
           </h1>
         </div>
         <div className="flex flex-col items-start justify-center ">
           <Dots className="" count={12} />
-          <span className="">{textData.stats.followers.label}</span>
+          <span className="">{textData.stats.impressions.label}</span>
 
           <h1 className=" font-semibold text-5xl lg:text-7xl my-0">
-            <NumberTicker value={90} />
-            <span className="text-[#9BD500]">K</span>
+            <NumberTicker value={1} />
+            <span className="text-[#9BD500]">B+</span>
           </h1>
         </div>
         <div className="flex flex-col items-start justify-center ">

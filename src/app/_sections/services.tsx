@@ -99,6 +99,7 @@ export default function Services({
               </div>
             </AccordionContent>
           </AccordionItem>
+
           <AccordionItem
             value="item-2"
             className="border-b border-[#cacaca] py-6"
@@ -216,6 +217,47 @@ export default function Services({
                 <div className="col-span-2">
                   <p className="text-[#717171] text-xl">
                     {textData.services.items[3].content.description}
+                  </p>
+                </div>
+              </div>
+            </AccordionContent>
+          </AccordionItem>
+
+          <AccordionItem
+            value="item-5"
+            className="border-b border-[#cacaca] py-6"
+          >
+            <AccordionHeader>
+              <div
+                className="text-2xl font-bold text-[#000000] hover:no-underline flex justify-between items-center cursor-pointer"
+                onClick={() => handleToggle("item-5")}
+              >
+                {textData.services.items[4].title}
+                <Button
+                  onClick={() => handleToggle("item-5")}
+                  variant="outline"
+                  size="xl"
+                  className={`text-lg  cursor-pointer ${
+                    value === "item-5"
+                      ? "bg-black text-white hover:bg-black hover:text-white"
+                      : "bg-transparent text-black hover:bg-transparent hover:text-black"
+                  }`}
+                >
+                  {value === "item-5" ? "View less" : "View more"}
+                </Button>
+              </div>
+            </AccordionHeader>
+
+            <AccordionContent className="pt-6">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="col-span-1">
+                  <h3 className="text-xl font-bold text-[#000000]">
+                    {textData.services.items[4].content.heading}
+                  </h3>
+                </div>
+                <div className="col-span-2">
+                  <p className="text-[#717171] text-xl">
+                    {textData.services.items[4].content.description}
                   </p>
                 </div>
               </div>
